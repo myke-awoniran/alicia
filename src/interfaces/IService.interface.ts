@@ -3,6 +3,4 @@ export interface IService {
     success: boolean;
     message: string;
     data?: any;
-    // accessToken?: string;
-    // refreshToken?: string;
 }

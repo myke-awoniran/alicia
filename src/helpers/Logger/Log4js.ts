@@ -1,6 +1,5 @@
 import log4js from 'log4js';
 import { ILogger, ILoggerOptions } from '../../interfaces';
-// import { SlackService } from '../../services';
 import chalk from 'chalk';
 
 
@@ -23,13 +22,11 @@ export class Log4js implements ILogger {
 
     Error(...error: any): void {
         const message = this.SerializeMessage(error);
-        // new SlackService().SendErrorLog(`Critical=>:::${message}`);
         this.logger.error(chalk.red(message));
     }
 
     Warn(...message: any): void {
         const serializedMessage = this.SerializeMessage(message);
-        // new SlackService().SendErrorLog(`Critical=>:::${serializedMessage}`);
         this.logger.warn(serializedMessage);
     }
 
